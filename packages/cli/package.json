@@ -1,0 +1,14 @@
+{
+  "name": "@yl-kernel/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "bin": {
+    "yl": "./src/index.ts"
+  },
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

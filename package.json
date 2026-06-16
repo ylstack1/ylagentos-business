@@ -3,6 +3,17 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "workspaces": [
+    "packages/types",
+    "packages/agent",
+    "packages/cli"
+  ],
+  "scripts": {
+    "dev": "bun run packages/cli/src/index.ts",
+    "test": "bun test",
+    "lint": "bun run tsc --noEmit",
+    "yl": "bun run packages/cli/src/index.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },

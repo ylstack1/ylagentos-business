@@ -30,5 +30,6 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 # IntelliJ based IDEs
 .idea
 
-# Finder (MacOS) folder config
+# generated agent packages (test artifacts)
+*.ylagent/
 .DS_Store
