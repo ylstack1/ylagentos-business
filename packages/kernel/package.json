@@ -1,9 +1,10 @@
 {
-  "name": "yl-kernel",
-  "module": "index.ts",
+  "name": "@yl-agentos/kernel",
+  "version": "0.1.0",
+  "module": "src/index.ts",
   "type": "module",
   "private": true,
-  "workspaces": ["packages/*"],
+  "dependencies": {},
   "devDependencies": {
     "@types/bun": "latest"
   },
