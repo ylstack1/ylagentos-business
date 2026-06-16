@@ -1,5 +1,5 @@
 
-import { IGitProvider, GitRepoInfo, ProviderInfo } from '@yl/types';
+import { IGitProvider, GitRepoInfo, ProviderInfo } from '../../interfaces';
 import { spawn } from 'child_process';
 
 export class GitHubGitProvider implements IGitProvider {

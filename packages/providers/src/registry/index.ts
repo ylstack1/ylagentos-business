@@ -1,5 +1,5 @@
 
-import { IProvider, ProviderType } from '@yl/types';
+import { IProvider, ProviderType } from '../interfaces';
 
 export class ProviderRegistry {
   private providers: Map<string, IProvider> = new Map();

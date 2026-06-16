@@ -1,5 +1,5 @@
 
-import { IRuntimeProvider, RuntimeConfig, RuntimeSession, ProviderInfo } from '@yl/types';
+import { IRuntimeProvider, RuntimeConfig, RuntimeSession, ProviderInfo } from '../../interfaces';
 import { spawn } from 'child_process';
 
 export class DockerRuntimeProvider implements IRuntimeProvider {

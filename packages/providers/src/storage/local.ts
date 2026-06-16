@@ -1,5 +1,5 @@
 
-import { IStorageProvider, ProviderInfo } from '@yl/types';
+import { IStorageProvider, ProviderInfo } from '../../interfaces';
 import { promises as fs } from 'fs';
 import * as path from 'path';
 

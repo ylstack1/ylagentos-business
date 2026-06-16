@@ -1,5 +1,5 @@
 
-export * from './registry';
+export * from './registry/index';
 export * from './runtime/docker';
 export * from './storage/local';
 export * from './git/github';

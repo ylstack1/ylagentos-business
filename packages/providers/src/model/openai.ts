@@ -1,5 +1,5 @@
 
-import { IModelProvider, Message, ModelConfig, ProviderInfo } from '@yl/types';
+import { IModelProvider, Message, ModelConfig, ProviderInfo } from '../../interfaces';
 
 export class OpenAIProvider implements IModelProvider {
   info: ProviderInfo = {

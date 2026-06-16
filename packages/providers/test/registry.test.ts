@@ -1,6 +1,6 @@
 
 import { expect, test, describe } from "bun:test";
-import { registry } from "../src/registry";
+import { registry } from "../src/registry/index";
 import { LocalStorageProvider } from "../src/storage/local";
 
 describe("ProviderRegistry", () => {
