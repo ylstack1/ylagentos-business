@@ -1,7 +1,6 @@
 
 import { promises as fs } from 'fs';
 import * as path from 'path';
-import { parse, stringify } from 'yaml';
 import * as dotenv from 'dotenv';
 
 export interface ProviderConfig {
@@ -16,7 +15,7 @@ export class ProviderConfigManager {
   constructor(configDir?: string) {
     const home = process.env.HOME || '/home/agent-provider-engineer';
     const dir = configDir || path.join(home, '.yl');
-    this.configPath = path.join(dir, 'providers.yaml');
+    this.configPath = path.join(dir, 'config.json');
   }
 
   async ensureConfigDir(): Promise<void> {
@@ -26,15 +25,23 @@ export class ProviderConfigManager {
   async loadConfigs(): Promise<ProviderConfig[]> {
     try {
       const content = await fs.readFile(this.configPath, 'utf8');
-      return parse(content) || [];
+      const data = JSON.parse(content);
+      return data.providers || [];
     } catch (e) {
       return [];
     }
   }
 
-  async saveConfigs(configs: ProviderConfig[]): Promise<void> {
+  async saveConfigs(providers: ProviderConfig[]): Promise<void> {
     await this.ensureConfigDir();
-    await fs.writeFile(this.configPath, stringify(configs), 'utf8');
+    let data: any = {};
+    try {
+      const content = await fs.readFile(this.configPath, 'utf8');
+      data = JSON.parse(content);
+    } catch (e) {}
+    
+    data.providers = providers;
+    await fs.writeFile(this.configPath, JSON.stringify(data, null, 2), 'utf8');
   }
 
   async setProvider(config: ProviderConfig): Promise<void> {

@@ -6,7 +6,6 @@
   "dependencies": {
     "dotenv": "latest",
     "e2b": "latest",
-    "node-ssh": "^13.2.1",
-    "yaml": "^2.9.0"
+    "node-ssh": "^13.2.1"
   }
 }
