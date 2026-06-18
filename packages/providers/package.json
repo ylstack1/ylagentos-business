@@ -4,6 +4,9 @@
   "type": "module",
   "main": "src/index.ts",
   "dependencies": {
-    "@yl/types": "workspace:*"
+    "dotenv": "latest",
+    "e2b": "latest",
+    "node-ssh": "^13.2.1",
+    "yaml": "^2.9.0"
   }
 }
